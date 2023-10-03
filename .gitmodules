@@ -1,0 +1,20 @@
+[submodule "Vulkan/Vendor/ImGui"]
+	path = Vulkan/Vendor/ImGui
+	url = https://github.com/ocornut/imgui
+	branch = docking
+[submodule "Vulkan/Vendor/glm"]
+	path = Vulkan/Vendor/GLM
+	url = https://github.com/g-truc/glm
+	branch = master
+[submodule "Vulkan/Vendor/stb"]
+	path = Vulkan/Vendor/stb
+	url = https://github.com/nothings/stb
+	branch = master
+[submodule "Vulkan/Vendor/tinyobjectloader"]
+	path = Vulkan/Vendor/tinyobjectloader
+	url = https://github.com/tinyobjloader/tinyobjloader
+	branch = master
+[submodule "Vulkan/Vendor/Spdlog"]
+	path = Vulkan/Vendor/Spdlog
+	url = https://github.com/gabime/spdlog
+	branch = master
