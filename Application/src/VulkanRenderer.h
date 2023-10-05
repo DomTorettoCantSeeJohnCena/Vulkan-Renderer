@@ -1,5 +1,7 @@
 #pragma once
 
+#include <stdint.h> 
+
 class VulkanRenderer
 {
 public:
@@ -12,6 +14,13 @@ public:
 	static void CreateSwapChain();
 	static void CreateImageViews();
 	static void CreateRenderPass();
+
+	static void CreateDescriptorSetLayout();
+	static void CreateDescriptorPool();
+	static void CreateDescriptorSets();
+
+	static void CreateUniformBuffers();   
+
 	static void CreateGraphicsPipeline(); 
 	static void CreateFramebuffers();
 	static void CreateCommandPool();
@@ -19,12 +28,19 @@ public:
 	static void CreateSyncObjects();
 
 
-	static void CreateVertexBuffer(); 
+	static void CreateVertexBuffer();
+	static void CreateIndexBuffer(); 
 
-	static void CreateViewportImage();
-	static void CreateViewportImageViews();
+	static void CreateViewportImages();
+	static void CreateViewportImageViews(); 
+	static void CreateViewportTextureSampler(); 
+	static void CreateViewportRenderPass();  
+	static void CreateViewportPipeline();  
+	static void CreateViewportCommandPool();
+	static void CreateViewportFramebuffers();
+	static void CreateViewportCommandBuffers();
 
-
+	static void UpdateUniformBuffer(uint32_t currentImage);
 	static void OnUpdate(); 
 
 	static void RecreateSwapChain();
@@ -32,10 +48,11 @@ public:
 	static void Cleanup(); 
 public:
 	static void InitImGui();
-	static void ImGuiOnUpdate();
+	static void ImGuiOnUpdate(uint32_t imageIndex);
 	static void ImGuiShutdown();
 private:
-	
+	 
 };
 
 
+ 
